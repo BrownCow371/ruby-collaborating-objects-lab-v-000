@@ -14,7 +14,8 @@ attr_accessor :path
   end
 
   def files_alternative
-    @files ||= Dir.glob("#{path}/*.mp3").collect do |f| f.gsub("#{path}/", "")
+    @files ||= Dir.glob("#{path}/*.mp3").collect do 
+    |f| f.gsub("#{path}/", "")
     binding.pry
   end
   end
